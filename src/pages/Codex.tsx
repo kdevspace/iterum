@@ -30,7 +30,7 @@ export function CodexPage() {
             {t.codex.header.quote}
           </blockquote>
           <div class="flex items-center justify-center gap-4 mt-6 text-xs text-codex-text-muted font-mono">
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
             <span>•</span>
             <span>CC BY-SA 4.0</span>
             <span>•</span>
@@ -154,15 +154,29 @@ export function CodexPage() {
             <h2 class="font-serif text-3xl font-bold text-codex-text mb-6">{ch.viae.title}</h2>
             <p class="text-codex-text-dim mb-8">{ch.viae.subtitle}</p>
 
-            <div class="space-y-6">
-              {ch.viae.items.map((item: any, i: number) => (
-                <div class={`p-6 rounded-xl border ${viaColors[i]} bg-codex-card/50`} key={item.via}>
-                  <p class="font-mono text-xs text-codex-text-muted uppercase tracking-widest mb-1">{item.via}</p>
-                  <h3 class="font-serif text-xl font-bold text-codex-text mb-2">{item.title}</h3>
-                  <p class="text-codex-text-dim text-sm mb-3">{item.desc}</p>
-                  <p class="font-serif italic text-codex-gold/70 text-sm">«{item.mantra}»</p>
-                </div>
-              ))}
+            <div class="space-y-10">
+              {(['artis', 'muneris'] as const).map((axis) => {
+                const items = ch.viae[axis] || (axis === 'artis' ? ch.viae.items : null);
+                if (!items) return null;
+                const axisTitle = axis === 'artis' ? ch.viae.artisTitle : ch.viae.munerisTitle;
+                return (
+                  <div key={axis}>
+                    {axisTitle && (
+                      <h3 class="font-serif text-xl font-bold text-codex-text mb-4">{axisTitle}</h3>
+                    )}
+                    <div class="space-y-6">
+                      {items.map((item: any, i: number) => (
+                        <div class={`p-6 rounded-xl border ${viaColors[i]} bg-codex-card/50`} key={item.via}>
+                          <p class="font-mono text-xs text-codex-text-muted uppercase tracking-widest mb-1">{item.via}</p>
+                          <h3 class="font-serif text-xl font-bold text-codex-text mb-2">{item.title}</h3>
+                          <p class="text-codex-text-dim text-sm mb-3">{item.desc}</p>
+                          <p class="font-serif italic text-codex-gold/70 text-sm">«{item.mantra}»</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             <p class="text-sm text-codex-text-muted mt-6 p-4 rounded-lg bg-codex-card/50 border border-codex-border/50">
@@ -400,7 +414,7 @@ export function CodexPage() {
               </p>
 
               <div class="text-center mt-8 font-mono text-xs text-codex-text-muted space-y-1">
-                <p>Version: 1.0.0</p>
+                <p>Version: 1.1.0</p>
                 <p>License: Creative Commons BY-SA 4.0</p>
                 <p>{ch.final.contributors}</p>
                 <p class="mt-2">{ch.final.tagline}</p>

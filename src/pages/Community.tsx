@@ -212,6 +212,48 @@ export function Community() {
           </blockquote>
         </div>
       </section>
+
+      {c.speech && (
+        <>
+          <div class="codex-divider codex-container my-2"></div>
+          <section class="codex-section">
+            <div class="codex-container">
+              <p class="codex-subheading mb-4">{c.speech.label}</p>
+              <h2 class="font-serif text-3xl font-bold text-codex-text mb-6">
+                {c.speech.title}
+              </h2>
+              <p class="codex-body text-codex-text-dim max-w-3xl">
+                {c.speech.text}
+              </p>
+            </div>
+          </section>
+        </>
+      )}
+
+      {c.amendment && (
+        <>
+          <div class="codex-divider codex-container my-2"></div>
+          <section class="codex-section">
+            <div class="codex-container">
+              <p class="codex-subheading mb-4">{c.amendment.label}</p>
+              <h2 class="font-serif text-3xl font-bold text-codex-text mb-6">
+                {c.amendment.title}
+              </h2>
+              <p class="codex-body text-codex-text-dim max-w-3xl mb-8">
+                {c.amendment.text}
+              </p>
+              <div class="space-y-4 max-w-3xl lg:max-w-4xl">
+                {c.amendment.steps.map((step: { n: string; text: string }) => (
+                  <div class="flex items-start gap-4" key={step.n}>
+                    <span class="font-mono text-codex-gold text-sm shrink-0 mt-1">{step.n}</span>
+                    <p class="text-codex-text-dim">{step.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }

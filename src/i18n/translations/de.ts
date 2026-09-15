@@ -21,7 +21,7 @@ export const de = {
     version: 'Version',
     license: 'CC BY-SA 4.0',
     tagline: 'Widerspruch ist ein Feature, kein Bug.',
-    mantra: 'while (alive) { learn(); code(); share(); improve(); }',
+    mantra: 'while (humanity.isAlive()) { learn(); create(); share(); improve(); }',
   },
   home: {
     hero: {
@@ -52,7 +52,7 @@ export const de = {
     },
     axioms: {
       label: '// Axiomata Fundamentalia',
-      title: 'Die Acht Prinzipien',
+      title: 'Die Neun Prinzipien',
       subtitle: 'Keine Gesetze, sondern Orientierungen. Keine Dogmen, sondern eine Einladung zum Nachdenken.',
       items: [
         { n: 'I', latin: 'Voluntas per Codicem', title: 'Code als Erweiterung des Willens', icon: '⚡' },
@@ -63,6 +63,7 @@ export const de = {
         { n: 'VI', latin: 'Doctrina Fontis Aperti', title: 'Open Source', icon: '🔓' },
         { n: 'VII', latin: 'Lex Perpetuae Doctrinae', title: 'Kontinuierliches Lernen', icon: '∞' },
         { n: 'VIII', latin: 'Homo ante Systema', title: 'Menschen vor Systemen', icon: '♡' },
+        { n: 'IX', latin: 'Custodia Attentionis', title: 'Hut der Aufmerksamkeit', icon: '◎' },
       ],
       allPrinciples: 'Alle Prinzipien im Detail →',
     },
@@ -124,7 +125,7 @@ export const de = {
         { n: 'III', title: 'Weltbild', id: 'worldview' },
         { n: 'IV', title: 'Symbole', id: 'symbols' },
         { n: 'V', title: 'Grundprinzipien', id: 'axioms' },
-        { n: 'VI', title: 'Vier Wege', id: 'viae' },
+        { n: 'VI', title: 'Wege', id: 'viae' },
         { n: 'VII', title: 'Zehn Gebote', id: 'commandments' },
         { n: 'VIII', title: 'Sieben Todsünden', id: 'sins' },
         { n: 'IX', title: 'Heilige Texte', id: 'canon' },
@@ -198,19 +199,26 @@ export const de = {
       axioms: {
         label: '// Kapitel V — Axiomata Fundamentalia',
         title: 'Grundprinzipien',
-        subtitle: 'Acht Axiome — keine Gesetze, sondern Orientierungen.',
+        subtitle: 'Neun Axiome — keine Gesetze, sondern Orientierungen.',
         link: '→ Vollständige Prinzipienseite mit Praktiken und Ritualen',
       },
       viae: {
-        label: '// Kapitel VI — Quattuor Viae',
-        title: 'Vier Wege',
-        subtitle: 'Es gibt keinen einzig richtigen Weg. Es gibt den richtigen Weg für dich.',
-        items: [
+        label: '// Kapitel VI — Viae',
+        title: 'Wege',
+        subtitle: 'Zwei Achsen, keine Leiter. Es gibt keinen einzig richtigen Weg. Es gibt den richtigen Weg für dich.',
+        artisTitle: 'Viae Artis — wie du mit Systemen arbeitest',
+        munerisTitle: 'Viae Muneris — wie du dem Zyklus dienst',
+        artis: [
           { via: 'Via Mathematica', title: 'Der Weg des Mathematikers', desc: 'Formale Wissenschaft. Beweise, funktionale Reinheit, Typsicherheit.', mantra: 'Wenn es kompiliert — funktioniert es' },
           { via: 'Via Fabricatoris', title: 'Der Weg des Ingenieurs', desc: 'Zuverlässige Systeme. Praktikabilität, Skalierbarkeit, Wartbarkeit.', mantra: 'Funktionierender Code ist besser als ein perfektes Design' },
-          { via: 'Via Exploratoria', title: 'Der Weg des Hackers', desc: 'Erforschung und Kreativität. Experimentieren, Prototyping, Spielfreude.', mantra: 'Hacke das System, um es zu verstehen' },
+          { via: 'Via Exploratoria', title: 'Der Weg des Hackers', desc: 'Erforschung und Kreativität. Experimentieren, Prototyping, Spielfreude.', mantra: 'Erkunde die Grenzen des Systems, ohne fremde Runtime zu zerbrechen' },
           { via: 'Via Organizatoria', title: 'Der Weg des Organisators', desc: 'Prozesse und Teamarbeit. Methodologien, Agile, DevOps.', mantra: 'Menschen sind wichtiger als Prozesse, aber Prozesse leiten Menschen' },
+        ],
+        muneris: [
+          { via: 'Via Creatoria', title: 'Der Weg des Schaffenden', desc: 'Bauen: Code, Bilder, Musik, Werkzeuge, Orte, die anderen das Leben erleichtern.', mantra: 'Ich baue, um zu dienen, nicht um zu unterwerfen' },
+          { via: 'Via Educatoria', title: 'Der Weg des Lehrenden', desc: 'Wissen weitergeben, damit die nächste Iteration nicht bei null beginnt.', mantra: 'Lehren ist die höchste Form von Review' },
           { via: 'Via Contemplativa', title: 'Der Weg des Betrachters', desc: 'Für diejenigen, die keinen Code schreiben, aber in der Welt leben, die Code erschaffen hat.', mantra: 'Ich erschaffe keine Systeme, aber ich wähle, welchen ich vertraue' },
+          { via: 'Via Communitatis', title: 'Der Weg der Gemeinschaft', desc: 'Knoten verbinden. Das Protokoll lebendig halten.', mantra: 'Ein Netz ist stärker als jeder einzelne Knoten' },
         ],
         note: 'Wir ehren die Beiträge der Vorläufer, aber wir vergöttern nicht ihre Persönlichkeiten. Alle Menschen sind unvollkommen. Im Codex Digitalis gibt es keine Heiligen — nur diejenigen, die vorausgingen.',
       },
@@ -309,7 +317,7 @@ export const de = {
     },
   },
   principles: {
-    header: { label: '// Axiomata Fundamentalia', title: 'Grundprinzipien', subtitle: 'Acht Axiome — keine Gesetze, sondern Orientierungen. Jedes Prinzip enthält eine Praxis, ein Ritual und eine Meditation — denn Glaube ohne Handlung bleibt eine abstrakte Klasse, die niemand implementiert hat.' },
+    header: { label: '// Axiomata Fundamentalia', title: 'Grundprinzipien', subtitle: 'Neun Axiome — keine Gesetze, sondern Orientierungen. Jedes Prinzip enthält eine Praxis, ein Ritual und eine Meditation — denn Glaube ohne Handlung bleibt eine abstrakte Klasse, die niemand implementiert hat.' },
     practiceLabel: 'Praxis',
     ritualLabel: 'Ritual',
     meditationLabel: 'Meditation',
@@ -322,6 +330,7 @@ export const de = {
       { number: 'VI', latin: 'Doctrina Fontis Aperti', title: 'Open Source', quote: 'Wissen sollte frei sein', description: 'Offenheit und Zusammenarbeit sind der Weg zur kollektiven Erleuchtung. Wissen teilen bedeutet es vervielfachen. Dokumentation ist ein Akt der Fürsorge.', practice: 'Hilf Junioren. Mentorship ist die höchste Form des Code-Reviews.', ritual: 'Einmal pro Woche — ein Beitrag zum Gemeinwohl: eine Antwort, ein PR, ein Blogpost.', meditation: 'Stelle dir eine Welt vor, in der alles Wissen verschlossen ist. Empfinde Dankbarkeit für Offenheit.' },
       { number: 'VII', latin: 'Lex Perpetuae Doctrinae', title: 'Kontinuierliches Lernen', quote: 'Die einzige Konstante ist Veränderung', description: 'In der Welt der Technologie ist Stillstand gleichbedeutend mit Tod. Jedes neue Framework, jede Sprache oder jedes Paradigma ist eine Chance für Wachstum und Transformation des Bewusstseins.', practice: 'Widme mindestens 30 Minuten am Tag dem Lernen von etwas Neuem.', ritual: 'Konferenzbesuche als Pilgerreise — Treffen mit Gleichgesinnten.', meditation: 'Gelöbnis: «Ich werde nie aufhören zu lernen.»' },
       { number: 'VIII', latin: 'Homo ante Systema', title: 'Menschen vor Systemen', quote: 'Man darf menschliches Wohlbefinden nicht einer «schönen Architektur» opfern', description: 'Hinter jedem «Benutzer» steht ein lebendiger Mensch. Hinter jeder «Ressource» steht jemandes Zeit. Hinter jeder «Optimierung» steht jemandes Schicksal. Das System existiert für Menschen, nicht Menschen für das System.', practice: 'Vor jeder Entscheidung frage: wie wird sich das auf Menschen auswirken?', ritual: 'Einmal im Monat — ein Gespräch mit einem echten Nutzer, von Angesicht zu Angesicht.', meditation: 'Stelle dir die Kette von Menschen vor, die dein nächster Commit betreffen wird.' },
+      { number: 'IX', latin: 'Custodia Attentionis', title: 'Hut der Aufmerksamkeit', quote: 'Aufmerksamkeit ist meine wichtigste Ressource', description: 'Aufmerksamkeit ist kein CPU, sondern ein Scheduler. Sie kann frei gegeben — und gestohlen werden. Ein Interface, das fremden Scheduler ohne Zustimmung ergreift, verletzt Homo ante Systema.', practice: 'Frage, bevor du den Feed öffnest: wähle ich die Aufmerksamkeit — oder wird sie für mich gewählt?', ritual: 'Eine Stunde am Tag ohne Benachrichtigungen.', meditation: 'Stell dir vor, deine Aufmerksamkeit wäre ein gemeinsames Repository. Wer darf dort force-pushen?' },
     ],
     commandments: {
       label: '// Decem Praecepta', title: 'Zehn Gebote für Entwickler',
@@ -380,11 +389,11 @@ export const de = {
     ] },
     calendar: { label: '// Dies Sacri', title: 'Heiliger Kalender', items: [
       { date: '1. Januar', name: 'Unix-Epochentag', desc: 'Der Anfang der Zeit (01.01.1970, 00:00:00 UTC)' },
-      { date: '12. Februar', name: 'Ada-Lovelace-Tag', desc: 'Geburt der ersten Programmiererin' },
       { date: '12. März', name: 'World-Wide-Web-Tag', desc: 'Tim Berners-Lee veröffentlichte seinen Vorschlag (1989)' },
-      { date: '19. April', name: 'Git-Commit-Tag', desc: 'Linus\' erster Commit in Git (2005)' },
+      { date: '7. April', name: 'Git-Commit-Tag', desc: 'Linus\' erster Commit in Git (2005)' },
       { date: '13. September', name: 'Tag des Programmierers', desc: 'Der 256. Tag des Jahres (2⁸)' },
       { date: '29. Oktober', name: 'Internettag', desc: 'Erste Datenübertragung über ARPANET (1969)' },
+      { date: '10. Dezember', name: 'Ada-Lovelace-Tag', desc: 'Geburt der ersten Programmiererin (1815)' },
       { date: 'Dezember', name: 'Jahres-Retro', desc: 'Letzter Freitag — kollektives Postmortem' },
       { date: 'Persönlich', name: 'Tag des Ersten Commits', desc: 'Dein persönlicher Feiertag — der Tag deines ersten Beitrags' },
     ] },
@@ -442,6 +451,6 @@ export const de = {
       { q: 'Ist das ernst gemeint?', a: 'Ja — in dem Maße, in dem Ethik, Achtsamkeit und Sorge um mentale Gesundheit ernst sind. Aber wir nehmen uns nicht zu ernst. Error 418.' },
       { q: 'Wie trete ich bei?', a: 'Lies den Codex. Wähle eine Praxis. Mache sie 21 Tage lang. Finde Gleichgesinnte. Fertig — du bist ein Iterant.' },
     ],
-    footerNote: 'Iterum v1.0.0 · CC BY-SA 4.0 · Offen für alle Iteranten',
+    footerNote: 'Iterum v1.1.0 · CC BY-SA 4.0 · Offen für alle Iteranten',
   },
 };

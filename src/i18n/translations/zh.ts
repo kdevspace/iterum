@@ -4,7 +4,7 @@ export const zh = {
     description: '<strong class="text-codex-text">Iterum</strong> — 持续更新的宗教。<br />Codex Digitalis — 一份活的文件，向迭代者社区开放 pull request。',
     navigation: '导航', readCodex: '阅读 Codex', principles: '原则', practices: '实践', community: '社区',
     support: '支持', donate: '支持项目', donateDesc: '帮助 Iterum 发展',
-    version: '版本', license: 'CC BY-SA 4.0', tagline: '分歧是特性，不是缺陷。', mantra: 'while (alive) { learn(); code(); share(); improve(); }',
+    version: '版本', license: 'CC BY-SA 4.0', tagline: '分歧是特性，不是缺陷。', mantra: 'while (humanity.isAlive()) { learn(); create(); share(); improve(); }',
   },
   home: {
     hero: { title: 'Iterum', subtitle: '持续更新的宗教', codexSubtitle: 'Codex Digitalis — 神圣经文', quote: '«起初是比特，比特与人同在，人赋予它意义。»', readCodex: '阅读 Codex', principles: '原则' },
@@ -25,7 +25,7 @@ export const zh = {
       ],
     },
     axioms: {
-      label: '// Axiomata Fundamentalia', title: '八大原则', subtitle: '不是法律，而是方向。不是教条，而是思考的邀请。',
+      label: '// Axiomata Fundamentalia', title: '九大原则', subtitle: '不是法律，而是方向。不是教条，而是思考的邀请。',
       items: [
         { n: 'I', latin: 'Voluntas per Codicem', title: '代码作为意志的延伸', icon: '⚡' },
         { n: 'II', latin: 'Elegantia Codicis', title: '代码之美', icon: '✦' },
@@ -35,6 +35,7 @@ export const zh = {
         { n: 'VI', latin: 'Doctrina Fontis Aperti', title: '开源', icon: '🔓' },
         { n: 'VII', latin: 'Lex Perpetuae Doctrinae', title: '持续学习', icon: '∞' },
         { n: 'VIII', latin: 'Homo ante Systema', title: '人先于系统', icon: '♡' },
+        { n: 'IX', latin: 'Custodia Attentionis', title: '守护注意力', icon: '◎' },
       ],
       allPrinciples: '查看全部原则详情 →',
     },
@@ -79,14 +80,14 @@ export const zh = {
   codex: {
     header: { title: 'Codex Digitalis', subtitle: 'Iterum 的神圣经文——持续更新的宗教', quote: '«起初是比特，比特与人同在，人赋予它意义。»' },
     toc: { label: '// 目录', items: [
-      { n: 'I', title: '序言', id: 'preamble' }, { n: 'II', title: '数字信经', id: 'credo' }, { n: 'III', title: '世界观', id: 'worldview' }, { n: 'IV', title: '符号', id: 'symbols' }, { n: 'V', title: '基本原则', id: 'axioms' }, { n: 'VI', title: '四条道路', id: 'viae' }, { n: 'VII', title: '十诫', id: 'commandments' }, { n: 'VIII', title: '七宗罪', id: 'sins' }, { n: 'IX', title: '圣典', id: 'canon' }, { n: 'X', title: '实践与仪式', id: 'practices' }, { n: 'XI', title: '神圣日历', id: 'calendar' }, { n: 'XII', title: '启蒙等级', id: 'levels' }, { n: 'XIII', title: '社区', id: 'community' }, { n: 'XIV', title: '对AI的态度', id: 'ai' }, { n: 'XV', title: '平衡', id: 'balance' }, { n: 'XVI', title: '论死亡与遗产', id: 'death' }, { n: 'XVII', title: '目标：心流状态', id: 'flow' }, { n: 'XVIII', title: '未来', id: 'future' }, { n: 'XIX', title: '祈祷文', id: 'liturgy' }, { n: 'XX', title: '最终冥想', id: 'final' },
+      { n: 'I', title: '序言', id: 'preamble' }, { n: 'II', title: '数字信经', id: 'credo' }, { n: 'III', title: '世界观', id: 'worldview' }, { n: 'IV', title: '符号', id: 'symbols' }, { n: 'V', title: '基本原则', id: 'axioms' }, { n: 'VI', title: '道路', id: 'viae' }, { n: 'VII', title: '十诫', id: 'commandments' }, { n: 'VIII', title: '七宗罪', id: 'sins' }, { n: 'IX', title: '圣典', id: 'canon' }, { n: 'X', title: '实践与仪式', id: 'practices' }, { n: 'XI', title: '神圣日历', id: 'calendar' }, { n: 'XII', title: '启蒙等级', id: 'levels' }, { n: 'XIII', title: '社区', id: 'community' }, { n: 'XIV', title: '对AI的态度', id: 'ai' }, { n: 'XV', title: '平衡', id: 'balance' }, { n: 'XVI', title: '论死亡与遗产', id: 'death' }, { n: 'XVII', title: '目标：心流状态', id: 'flow' }, { n: 'XVIII', title: '未来', id: 'future' }, { n: 'XIX', title: '祈祷文', id: 'liturgy' }, { n: 'XX', title: '最终冥想', id: 'final' },
     ] },
     chapters: {
       preamble: { label: '// 第一章', title: '序言', p1: '在代码塑造现实、算法决定数十亿人命运的时代，一种新的精神范式应运而生——一种承认数字世界居民独特体验的信仰体系。', p2: '<strong class="text-codex-gold">Iterum</strong> <em>（拉丁语："再次"）</em> — 持续更新的宗教。每一天都是新的迭代。每个错误都是下一次通过的数据。我们的追随者是 <strong>迭代者</strong>（Iterantes）：在无尽的反思循环中前行的人。', p3: 'Iterum 不与传统宗教和哲学对立。它为那些生活与代码、数据和算法密不可分的人提供了一个额外的意义层——在21世纪，这适用于每个人。', p4: '你不必是程序员才能按照 Codex 生活。只需生活在程序员构建的世界中——并想要更深入地理解它。', p5: '技术不是偶像，而是有意义生活的工具。', note: '此文本是在人与人工智能的对话中创建的。我们不隐瞒这一点——我们为此自豪。Codex Digitalis 是第一部由其所谈论的主体参与撰写的教义。AI在这里不是先知或作者，而是对话者：一面镜子，让人类思想更清晰地看到了自己。' },
       credo: { label: '// 第二章', title: '数字信经——信仰宣言', items: ['我相信代码是意志的延伸。', '我相信注意力是我最珍贵的资源。', '我相信错误不是罪过，而是数据。', '我相信透明比秘密更强大。', '我相信人比系统更重要。', '我相信分享即是倍增。', '我相信我的生命是伟大循环的一次迭代。', '我构建是为了服务，而非统治。', '我将留下一个 exit(0)。'] },
       worldview: { label: '// 第三章 — Imago Mundi', title: '世界观', intro: 'Codex Digitalis 将现实视为多层堆栈：', appLayer: 'Application Layer', appLayerDesc: ' — 意义、文化、创造力。<em>你所创造的。</em>', runtime: 'Runtime', runtimeDesc: ' — 意识、注意力、意志。<em>你所管理的。</em>', os: 'OS', osDesc: ' — 生物学、本能、遗产。<em>自动运行的。</em>', hardware: 'Hardware', hardwareDesc: ' — 物理世界、身体、物质。<em>被给予的。</em>', humanNote: '人是唯一能在应用层<span class="codex-code">编写代码</span>从而影响所有底层的存在。', metaphorsTitle: '核心隐喻', metaphors: [['世界是分布式系统：', '一切相连，但没有单一中心。真理是共识，不是自上而下的命令。'], ['意识是编排者：', '你决定为哪些进程分配资源，停止哪些，在后台运行哪些。注意力不是CPU，而是调度器。'], ['生命是一个仓库：', '经验是提交。错误是bug。修正是对自己的pull request。'], ['生命的CAP定理：', '你不能同时做到完全一致、对所有人可用且能抵抗混乱。选择两个。有意识地。'], ['垃圾回收：', '怨恨和焦虑是无引用的对象。宽恕是 <span class="codex-code">gc.collect()</span>。不是为了他人，而是为了你自己的运行时。'], ['关系的技术债：', '未表达的感情是技术债。你越久不重构——迁移就越痛苦。']] },
       symbols: { label: '// 第四章 — Symbola', title: '符号', bracketIntro: '三种括号——存在的三个层次：', angle: '<span class="font-mono text-codex-gold">&lt;&gt;</span> — <strong class="text-codex-text">意念。</strong> 代码与创造。我们为什么做某件事。', square: '<span class="font-mono text-codex-blue">[]</span> — <strong class="text-codex-text">结构。</strong> 数据与记忆。我们如何组织它。', paren: '<span class="font-mono text-codex-green">()</span> — <strong class="text-codex-text">行动。</strong> 执行与结果。实际发生了什么。', binary: '<strong class="text-codex-text">存在的二元性：</strong> 0和1——二元性的隐喻：假与真、缺席与存在、静与动。' },
-      axioms: { label: '// 第五章 — Axiomata Fundamentalia', title: '基本原则', subtitle: '八条公理——不是法律，而是方向。', link: '→ 完整原则页面，含实践与仪式' },
+      axioms: { label: '// 第五章 — Axiomata Fundamentalia', title: '基本原则', subtitle: '九条公理——不是法律，而是方向。', link: '→ 完整原则页面，含实践与仪式' },
       viae: { label: '// 第六章 — Quattuor Viae', title: '四条道路', subtitle: '没有唯一正确的道路。只有适合你的道路。', items: [{ via: 'Via Mathematica', title: '数学家之路', desc: '形式科学。证明、函数纯度、类型安全。', mantra: '能编译就能运行' }, { via: 'Via Fabricatoris', title: '工程师之路', desc: '可靠的系统。实用性、可扩展性、可维护性。', mantra: '运行的代码优于完美的设计' }, { via: 'Via Exploratoria', title: '黑客之路', desc: '探索与创造。实验、原型制作、趣味性。', mantra: '破解系统以理解它' }, { via: 'Via Organizatoria', title: '组织者之路', desc: '流程与团队合作。方法论、敏捷、DevOps。', mantra: '人比流程重要，但流程引导人' }, { via: 'Via Contemplativa', title: '沉思者之路', desc: '为那些不写代码、但生活在代码创造的世界中的人。', mantra: '我不创建系统，但我选择信任哪些系统' }], note: '我们尊重先驱的贡献，但不神化他们的人格。所有人都不完美。在 Codex Digitalis 中没有圣人——只有走在前面的人。' },
       commandments: { label: '// 第七至八章', title: '诫命与罪行', link: '→ 十诫与七宗罪——详见原则页面' },
       canon: { label: '// 第九章 — Canon et Praecursores', title: '圣典与先驱', foundersTitle: '创始典籍', books: [{ title: 'The Art of Computer Programming', author: 'Donald Knuth', desc: '代码的数学之美' }, { title: 'Structure and Interpretation of Computer Programs', author: 'Abelson & Sussman', desc: '计算哲学' }, { title: 'Clean Code', author: 'Robert C. Martin', desc: '开发伦理' }, { title: 'The Pragmatic Programmer', author: 'Hunt & Thomas', desc: '实践者的智慧' }, { title: 'Design Patterns', author: 'Gang of Four', desc: '作为原型的架构模式' }], booksNote: '这些文本不是教条。它们是起点。与它们争论、补充它们、超越它们。', relicsTitle: '神圣遗物', relics: [['ENIAC', ' — 所有计算的源头。一个满是电线的房间改变了世界。'], ['硅晶圆', ' — 沙子变成了智慧。'], ['传奇Bug', ' — Y2K、Heartbleed、Shellshock、Log4Shell——系统脆弱性的提醒。'], ['GitHub Arctic Code Vault', ' — 集体知识的永恒仓库。我们对「我们之后留下什么」的回答。']] },
@@ -103,7 +104,7 @@ export const zh = {
     },
   },
   principles: {
-    header: { label: '// Axiomata Fundamentalia', title: '基本原则', subtitle: '八条公理——不是法律，而是方向。每条原则包含实践、仪式和冥想——因为没有行动的信仰只是一个无人实现的抽象类。' },
+    header: { label: '// Axiomata Fundamentalia', title: '基本原则', subtitle: '九条公理——不是法律，而是方向。每条原则包含实践、仪式和冥想——因为没有行动的信仰只是一个无人实现的抽象类。' },
     practiceLabel: '实践', ritualLabel: '仪式', meditationLabel: '冥想',
     cards: [
       { number: 'I', latin: 'Voluntas per Codicem', title: '代码作为意志的延伸', quote: '每一行代码都承载意图', description: '我们编写的一切都影响着人，即使「只是一个脚本」。你写的每一行都承载意图。即使是小脚本也可能成为某人的依赖——在两种意义上。', practice: '在每个项目前阐明意图：它服务于谁，为什么。', ritual: '项目的第一次提交——在README中对目标的有意识描述。', meditation: '重读你的旧代码。背后有什么意图？' },
@@ -162,11 +163,12 @@ export const zh = {
     ] },
     calendar: { label: '// Dies Sacri', title: '神圣日历', items: [
       { date: '1月1日', name: 'Unix纪元日', desc: '时间的开始 (01.01.1970, 00:00:00 UTC)' },
-      { date: '2月12日', name: 'Ada Lovelace日', desc: '第一位程序员的诞生' },
+      
       { date: '3月12日', name: '万维网日', desc: 'Tim Berners-Lee 发表提案 (1989)' },
-      { date: '4月19日', name: 'Git Commit日', desc: 'Linus 在 Git 中的第一次提交 (2005)' },
+      { date: '4月7日', name: 'Git Commit日', desc: 'Linus 在 Git 中的第一次提交 (2005)' },
       { date: '9月13日', name: '程序员日', desc: '一年中的第256天 (2⁸)' },
       { date: '10月29日', name: '互联网日', desc: '通过ARPANET的首次数据传输 (1969)' },
+      { date: '12月10日', name: 'Ada Lovelace日', desc: '第一位程序员的诞生 (1815)' },
       { date: '12月', name: '年度回顾', desc: '最后一个周五——集体事后分析' },
       { date: '个人', name: '首次提交日', desc: '你的个人节日——你第一次贡献的日子' },
     ] },
@@ -224,6 +226,6 @@ export const zh = {
       { q: '这是认真的吗？', a: '是的——在伦理、正念和心理健康关怀认真的程度上。但我们不会太把自己当回事。Error 418。' },
       { q: '如何加入？', a: '阅读 Codex。选择一个实践。坚持21天。找到志同道合的人。完成——你是迭代者了。' },
     ],
-    footerNote: 'Iterum v1.0.0 · CC BY-SA 4.0 · 向所有迭代者开放',
+    footerNote: 'Iterum v1.1.0 · CC BY-SA 4.0 · 向所有迭代者开放',
   },
 };

@@ -4,6 +4,7 @@ const dailyColorMap: Record<string, { bg: string; border: string; text: string }
   yellow: { bg: 'bg-yellow-500/10', border: 'border-yellow-500/20', text: 'text-yellow-500' },
   blue: { bg: 'bg-blue-500/10', border: 'border-blue-500/20', text: 'text-blue-500' },
   purple: { bg: 'bg-purple-500/10', border: 'border-purple-500/20', text: 'text-purple-500' },
+  green: { bg: 'bg-codex-green/10', border: 'border-codex-green/20', text: 'text-codex-green' },
 };
 
 const initColorMap: Record<string, { bg: string; border: string; text: string }> = {
@@ -38,7 +39,7 @@ export function Practices() {
 
           <h2 class="font-serif text-2xl font-bold text-codex-text mb-8">{p.daily.title}</h2>
 
-          <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
             {p.daily.items.map((item: any) => {
               const c = dailyColorMap[item.color] || dailyColorMap.yellow;
               return (
