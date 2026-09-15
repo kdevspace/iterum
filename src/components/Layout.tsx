@@ -1,8 +1,18 @@
 import { ComponentChildren } from 'preact';
 import { useState } from 'preact/hooks';
-import { Link } from 'preact-router/match';
 import { useI18n } from '../i18n';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { isActivePath, useRoutePath } from '../route-path';
+
+function NavLink({ href, children, class: className = '' }: { href: string; children: ComponentChildren; class?: string }) {
+  const current = useRoutePath();
+  const active = isActivePath(href, current);
+  return (
+    <a href={href} class={`${className}${active ? ' text-codex-gold' : ''}`}>
+      {children}
+    </a>
+  );
+}
 
 interface LayoutProps {
   children: ComponentChildren;
@@ -24,11 +34,11 @@ export function Layout({ children }: LayoutProps) {
 
           {/* Desktop nav */}
           <div class="hidden md:flex items-center gap-1">
-            <Link href="/codex" class="codex-btn-ghost text-xs" activeClassName="text-codex-gold">{t.nav.codex}</Link>
-            <Link href="/principles" class="codex-btn-ghost text-xs" activeClassName="text-codex-gold">{t.nav.principles}</Link>
-            <Link href="/practices" class="codex-btn-ghost text-xs" activeClassName="text-codex-gold">{t.nav.practices}</Link>
-            <Link href="/community" class="codex-btn-ghost text-xs" activeClassName="text-codex-gold">{t.nav.community}</Link>
-            <Link href="/about" class="codex-btn-ghost text-xs" activeClassName="text-codex-gold">{t.nav.about}</Link>
+            <NavLink href="/codex" class="codex-btn-ghost text-xs">{t.nav.codex}</NavLink>
+            <NavLink href="/principles" class="codex-btn-ghost text-xs">{t.nav.principles}</NavLink>
+            <NavLink href="/practices" class="codex-btn-ghost text-xs">{t.nav.practices}</NavLink>
+            <NavLink href="/community" class="codex-btn-ghost text-xs">{t.nav.community}</NavLink>
+            <NavLink href="/about" class="codex-btn-ghost text-xs">{t.nav.about}</NavLink>
             <a
               href="https://www.donationalerts.com/r/iterum_servitor"
               target="_blank"
@@ -136,7 +146,7 @@ export function Layout({ children }: LayoutProps) {
             </div>
             <div>
               <h4 class="font-mono text-codex-text uppercase tracking-widest text-sm mb-4">{t.footer.version}</h4>
-              <p class="text-codex-text-dim text-sm">Iterum v1.0.0</p>
+              <p class="text-codex-text-dim text-sm">Iterum v1.1.0</p>
               <p class="text-codex-text-dim text-sm mt-1">{t.footer.license}</p>
               <p class="text-codex-text-muted text-xs mt-4">{t.footer.tagline}</p>
             </div>
@@ -144,7 +154,7 @@ export function Layout({ children }: LayoutProps) {
           <div class="codex-divider my-8"></div>
           <div class="text-center">
             <p class="font-mono text-codex-text-muted text-xs">
-              while (alive) {'{'} learn(); code(); share(); improve(); {'}'}
+              while (humanity.isAlive()) {'{'} learn(); create(); share(); improve(); {'}'}
             </p>
           </div>
         </div>

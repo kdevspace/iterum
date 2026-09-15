@@ -34,13 +34,8 @@ const I18nContext = createContext<I18nContextType>({
 });
 
 export function I18nProvider({ children }: { children: ComponentChildren }) {
-  const [lang, setLangState] = useState<Lang>(() => {
-    try {
-      const saved = localStorage.getItem('iterum-lang') as Lang;
-      if (saved && allTranslations[saved]) return saved;
-    } catch {}
-    return 'ru';
-  });
+  // Default to Russian so prerendered HTML matches the first client hydrate.
+  const [lang, setLangState] = useState<Lang>('ru');
 
   const setLang = useCallback((newLang: Lang) => {
     setLangState(newLang);
@@ -48,6 +43,13 @@ export function I18nProvider({ children }: { children: ComponentChildren }) {
   }, []);
 
   const dir = languages.find(l => l.code === lang)?.dir || 'ltr';
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('iterum-lang') as Lang;
+      if (saved && allTranslations[saved] && saved !== 'ru') setLangState(saved);
+    } catch {}
+  }, []);
 
   useEffect(() => {
     document.documentElement.dir = dir;
